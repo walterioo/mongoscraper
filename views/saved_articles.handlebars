@@ -1,0 +1,48 @@
+<div class="container p-0">
+    {{#each articles}}
+        <div class="article">
+        <div class="row">
+            <div class="col-4 text-center imageContainer p-0">
+                <img class="rounded img-fluid py-1" src={{this.thumbnail}}>
+            </div>
+            <div class="col-6 text-center align-self-center p-1">
+                <a href={{this.link}} target="_blank">
+                    <p>{{this.title}}</p>
+                </a>
+            </div>
+            <div class="col-2 saveColumn p-0 text-center align-self-center border-left border-darker">
+                <button data-id={{this._id}} class="btn btn-primary mb-1 notesBtn p-2"><i class="fas fa-sticky-note"></i></button>
+                <button data-id={{this._id}} class="btn btn-danger deleteFromSaveBtn p-2"><i class="fas fa-trash-alt"></i></button>
+            </div>
+        </div>
+    </div>   
+    {{/each}}
+
+     <div id="notes-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title"><strong>Notes</strong></h2>
+                </div>
+                <div class="modal-body">
+                    <div id="savedNotes">
+
+                    </div>
+                    
+                    <hr>
+                    <p>New note</p>
+                    <div class="p-0 text-right col-12">
+                        <textarea id="noteText" class="mb-2" style="width:100%"></textarea>
+                        <button id="saveNoteBtn" style="text-align: right" class="btn btn-dark">Save Note</button>
+                    </div>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

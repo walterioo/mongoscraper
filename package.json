@@ -1,0 +1,26 @@
+{
+  "name": "scrapingnews",
+  "version": "1.0.0",
+  "description": "New site using mongoDb and web scrapping",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/walterioo/mongoscrapper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/walterioo/mongoscrapper/issues"
+  },
+  "homepage": "https://github.com/walterioo/mongoscrapper#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^5.4.2"
+  }
+}
